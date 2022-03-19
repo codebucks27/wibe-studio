@@ -2,13 +2,13 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 import { AnimatePresence } from 'framer-motion';
 import {  useRef } from 'react';
-// import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { ThemeProvider } from 'styled-components';
 
 // import Loader from './components/Loader';
-// import ScrollTriggerProxy from './components/ScrollTriggerProxy';
+import ScrollTriggerProxy from './components/ScrollTriggerProxy';
 import About from './sections/About';
-// import Footer from './sections/Footer';
+import Footer from './sections/Footer';
 import Home from './sections/Home';
 import Marquee from './sections/Marquee';
 import NewArrival from './sections/NewArrival';
@@ -17,7 +17,6 @@ import GlobalStyles from './styles/GlobalStyles';
 import { dark } from './styles/Themes';
 
 
-import useLocoScroll from './components/useLocoScroll';
 
 
 
@@ -28,7 +27,6 @@ function App() {
   // const [Loaded, setLoaded] = useState(false);
 
 
-  useLocoScroll();
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -40,12 +38,12 @@ function App() {
     <>
       <GlobalStyles />
       <ThemeProvider theme={dark}>
-        {/* <LocomotiveScrollProvider
+        <LocomotiveScrollProvider
           options={{
             smooth: true,
             // ... all available Locomotive Scroll instance options
             smartphone: {
-              smooth: false,
+              smooth: true,
             },
             tablet: {
               smooth: true,
@@ -59,9 +57,9 @@ function App() {
             ]
           }
           containerRef={containerRef}
-        > */}
+        >
           <main className="App" data-scroll-container ref={containerRef}>
-            {/* <ScrollTriggerProxy /> */}
+            <ScrollTriggerProxy />
 
             <AnimatePresence>
               {/* {Loaded ? null : <Loader />} */}
@@ -70,10 +68,10 @@ function App() {
               <Shop key="Shop" />
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />
-              {/* <Footer key="Footer" /> */}
+              <Footer key="Footer" />
             </AnimatePresence>
           </main>
-        {/* </LocomotiveScrollProvider> */}
+        </LocomotiveScrollProvider>
       </ThemeProvider>
     </>
   );
