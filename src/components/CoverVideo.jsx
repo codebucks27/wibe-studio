@@ -101,40 +101,40 @@ const item = {
 
 const CoverVideo = () => {
   return (
-    <VideoContainer>
+    <VideoContainer data-scroll>
       <DarkOverlay />
 
-      <Title variants={container} initial="hidden" animate="show" data-scroll>
+      <Title variants={container} initial="hidden" animate="show">
         <div>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.13"
-            data-scroll-speed="4"
+            data-scroll-delay="0.15"
+            data-scroll-speed="1"
           >
             W
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.09"
-            data-scroll-speed="4"
+            data-scroll-delay="0.08"
+            data-scroll-speed="1"
           >
             i
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.06"
-            data-scroll-speed="4"
+            data-scroll-delay="0.04"
+            data-scroll-speed="1"
           >
             b
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.04"
-            data-scroll-speed="4"
+            data-scroll-delay="0.02"
+            data-scroll-speed="1"
           >
             e
           </motion.h1>
@@ -143,8 +143,8 @@ const CoverVideo = () => {
           style={{ alignSelf: 'flex-end' }}
           variants={item}
           data-scroll
-          data-scroll-delay="0.04"
-          data-scroll-speed="2"
+          data-scroll-delay="0.01"
+          data-scroll-speed="1"
         >
           inspire. create. belive
         </motion.h2>

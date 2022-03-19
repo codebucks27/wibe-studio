@@ -129,12 +129,13 @@ const Title = styled.h1`
 
   @media (max-width: 64em) {
     font-size: ${(props) => `calc(${props.theme.fontBig} - 5vw)`};
-    left: 0;
   top: 0;
+  left: 0%;
 
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxxxl};
+    left: -50%;
 
     
   }
@@ -172,7 +173,7 @@ const About = () => {
           src={img2}
           alt="About Us"
           data-scroll
-          data-scroll-speed="10"
+          data-scroll-speed="5"
         />
         <img
           width="400"
@@ -181,7 +182,7 @@ const About = () => {
           src={img3}
           alt="About Us"
           data-scroll
-          data-scroll-speed="-4"
+          data-scroll-speed="-2"
         />
       </Right>
     </Section>

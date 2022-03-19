@@ -111,6 +111,7 @@ const Title = styled(motion.h1)`
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
+    left: -50%;
   
   }
 `;
@@ -214,13 +215,7 @@ const NewArrival = () => {
       <Overlay />
 
       <Title
-        initial={{ opacity: 0, x: -200 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          type: 'spring',
-          duration: 3,
-        }}
+        data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
       >
         New Arrivals
       </Title>
