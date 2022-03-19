@@ -1,11 +1,11 @@
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 import { AnimatePresence } from 'framer-motion';
-import {  useRef } from 'react';
+import {  useRef,useState,useEffect } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { ThemeProvider } from 'styled-components';
 
-// import Loader from './components/Loader';
+import Loader from './components/Loader';
 import ScrollTriggerProxy from './components/ScrollTriggerProxy';
 import About from './sections/About';
 import Footer from './sections/Footer';
@@ -24,15 +24,15 @@ import { dark } from './styles/Themes';
 function App() {
   // useLocoScroll();
   const containerRef = useRef(null);
-  // const [Loaded, setLoaded] = useState(false);
+  const [Loaded, setLoaded] = useState(false);
 
 
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoaded(true);
-  //   }, 3000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 3000);
+  }, []);
 
   return (
     <>
@@ -62,7 +62,7 @@ function App() {
             <ScrollTriggerProxy />
 
             <AnimatePresence>
-              {/* {Loaded ? null : <Loader />} */}
+              {Loaded ? null : <Loader />}
               <Home key="home" />
               <About key="about" />
               <Shop key="Shop" />

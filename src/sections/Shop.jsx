@@ -21,7 +21,7 @@ const Section = styled(motion.section)`
   /* width: 80vw; */
   width: 100vw;
   margin: 0 auto;
-
+overflow: hidden;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -31,7 +31,7 @@ const Section = styled(motion.section)`
   /* background-color: orange; */
 `;
 
-const Title = styled(motion.h1)`
+const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
   font-family: 'Kaushan Script';
   font-weight: 300;
@@ -102,7 +102,6 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   /* width: 65%; */
-
   position: absolute;
   left: 35%;
   padding-left: 30%;
@@ -142,7 +141,7 @@ const Product = ({ img, title = '' }) => {
   return (
     // x: 100, y: -100
     <Item
-      data-scroll
+      
       initial={{ filter: 'grayscale(100%)' }}
       whileInView={{ filter: 'grayscale(0%)' }}
       transition={{ duration: 0.5 }}
@@ -222,13 +221,7 @@ const Shop = () => {
   return (
     <Section ref={ref} id="shop">
       <Title
-        initial={{ opacity: 0, x: -500 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          type: 'spring',
-          duration: 3,
-        }}
+        
         data-scroll
         data-scroll-speed="-1"
       >
