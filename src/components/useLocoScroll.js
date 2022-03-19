@@ -14,11 +14,12 @@ export default function useLocoScroll() {
     let locoScroll = new LocomotiveScroll({
       el: scrollEl,
       smooth: true,
-      
-      smartphone: {
-		smooth: true,
-		direction: 'vertical',
-	},
+      mobile: {
+        smooth: true
+    },
+    tablet: {
+        smooth: true
+    }
     });
 
     locoScroll.on("scroll", ScrollTrigger.update);
