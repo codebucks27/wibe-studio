@@ -23,6 +23,12 @@ const Container = styled(motion.div)`
 
   width: 100%;
 
+  @media (max-width: 48em) {
+    svg{
+      width: 20vw;
+    }
+  }
+
   svg {
     width: 10vw;
 
@@ -74,6 +80,11 @@ const Text = styled(motion.span)`
   font-size: ${(props) => props.theme.fontxl};
   color: ${(props) => props.theme.text};
   padding-top: 0.5rem;
+
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontlg};
+
+  }
 `;
 
 const Loader = () => {

@@ -13,6 +13,13 @@ const Section = styled.section`
   position: relative;
 
   display: flex;
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
+  
+  @media (max-width: 30em) {
+    width: 100vw;
+  }
   /* justify-content: center;
   align-items: center; */
 `;
@@ -24,12 +31,41 @@ const Left = styled.div`
   position: relative;
   z-index: 5;
   margin-top: 20%;
+
+  @media (max-width: 64em) {
+    width: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) !important;
+    margin: 0 auto;
+
+    padding: 2rem;
+    font-weight: 600;
+
+    backdrop-filter: blur(2px);
+    background-color: ${props => `rgba(${props.theme.textRgba},0.4)`};
+    border-radius: 20px;
+  }
+  @media (max-width: 48em) {
+  font-size: ${(props) => props.theme.fontmd};
+    
+  }
+  @media (max-width: 30em) {
+  font-size: ${(props) => props.theme.fontsm};
+  padding: 2rem;
+  width: 70%;
+    
+  }
 `;
 
 const Right = styled.div`
   width: 50%;
   position: relative;
   /* min-height: 100vh; */
+
+ 
   img {
     width: 100%;
     height: auto;
@@ -47,6 +83,33 @@ const Right = styled.div`
     left: 80%;
     top: 30%;
   }
+  @media (max-width: 64em) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .small-img-1 {
+    width: 30%;
+    height: auto;
+    left: 5%;
+    bottom: 10%;
+    
+  }
+  .small-img-2 {
+    width: 30%;
+    height: auto;
+
+    position: absolute;
+    left: 60%;
+    bottom: 20%;
+  }
+  }
 `;
 
 const Title = styled.h1`
@@ -63,12 +126,24 @@ const Title = styled.h1`
   span {
     display: inline-block;
   }
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => `calc(${props.theme.fontBig} - 5vw)`};
+    left: 0;
+  top: 0;
+
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxxxl};
+
+    
+  }
 `;
 
 const About = () => {
   return (
-    <Section id="fixed-target" className="about">
-      <Title data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">
+    <Section  data-scroll-id="fixed-target" className="about">
+      <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
         About Us
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">

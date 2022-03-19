@@ -43,6 +43,16 @@ const Title = styled(motion.h1)`
   top: 1rem;
   left: 5%;
   z-index: 11;
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+
+
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+  
+  }
 `;
 
 const Left = styled.div`
@@ -54,8 +64,7 @@ const Left = styled.div`
   z-index: 10;
 
   position: fixed;
-  right: 65%;
-
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +75,30 @@ const Left = styled.div`
     width: 80%;
     margin: 0 auto;
   }
+
+  
+  @media (max-width: 64em) {
+    p {
+    font-size: ${(props) => props.theme.fontmd};
+
+  }
+
+  }
+
+  @media (max-width: 48em) {
+   width: 40%;
+   p {
+    font-size: ${(props) => props.theme.fontsm};
+
+  }
+  }
+  @media (max-width: 30em) {
+   p {
+    font-size: ${(props) => props.theme.fontxs};
+
+  }
+  }
+  
 `;
 const Right = styled.div`
   /* width: 65%; */
@@ -97,6 +130,12 @@ const Item = styled(motion.div)`
     text-align: center;
     cursor: pointer;
   }
+
+  @media (max-width: 48em) {
+  width: 15rem;
+
+  }
+  
 `;
 //data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
 const Product = ({ img, title = '' }) => {
@@ -181,7 +220,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <Section data-scroll ref={ref} id="shop">
+    <Section ref={ref} id="shop">
       <Title
         initial={{ opacity: 0, x: -500 }}
         whileInView={{ opacity: 1, x: 0 }}

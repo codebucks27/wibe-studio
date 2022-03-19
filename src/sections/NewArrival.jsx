@@ -35,6 +35,29 @@ const Overlay = styled.div`
   border: 3px solid black;
 
   z-index: 11;
+
+  @media (max-width: 70em) {
+  width: 40vw;
+
+    height: 80vh;
+  }
+
+  @media (max-width: 64em) {
+  width: 50vw;
+  box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+
+    height: 80vh;
+  }
+  @media (max-width: 48em) {
+  width: 60vw;
+
+    height: 80vh;
+  }
+  @media (max-width: 30em) {
+  width: 80vw;
+
+    height: 60vh;
+  }
 `;
 
 const Container = styled.div`
@@ -52,6 +75,20 @@ const Container = styled.div`
   align-items: center;
   /* box-shadow: 0 0 0 9999px ${(props) => props.theme.body}; */
   /* box-shadow: 0 0 0 9999px ${(props) => props.theme.body}; */
+
+  @media (max-width: 64em) {
+  width: 30vw;
+
+
+  }
+  @media (max-width: 48em) {
+  width: 40vw;
+
+  }
+  @media (max-width: 30em) {
+  width: 60vw;
+
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -64,8 +101,18 @@ const Title = styled(motion.h1)`
 
   position: absolute;
   top: 2rem;
-
+  left: 1rem;
   z-index: 15;
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+
+
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+  
+  }
 `;
 const Text = styled.div`
   width: 20%;
@@ -76,6 +123,12 @@ const Text = styled.div`
   top: 0;
   right: 0;
   z-index: 11;
+
+  @media (max-width: 48em) {
+    display: none;
+  
+  }
+ 
 `;
 
 const Item = styled.div`
@@ -157,12 +210,12 @@ const NewArrival = () => {
   }, []);
 
   return (
-    <Section ref={ref} id="fixed-target" className="new-arrival">
+    <Section  ref={ref} id="fixed-target" className="new-arrival">
       <Overlay />
 
       <Title
-        initial={{ opacity: 0, x: -500 }}
-        whileInView={{ opacity: 1, x: -400 }}
+        initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{
           type: 'spring',
