@@ -179,7 +179,7 @@ const Shop = () => {
           scroller: '.App', //locomotive-scroll
           scrub: true,
           pin: true,
-          // markers: true,
+          markers: true,
           // anticipatePin: 1,
         },
         height: `${scrollingElement.scrollWidth}px`,
@@ -193,7 +193,7 @@ const Shop = () => {
           end: pinWrapWidth,
           scroller: '.App', //locomotive-scroll
           scrub: true,
-          // markers: true,
+          markers: true,
           // anticipatePin: 1,
         },
         x: -pinWrapWidth,

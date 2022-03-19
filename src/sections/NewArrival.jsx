@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import img1 from '../assets/Images/11.webp';
 import img2 from '../assets/Images/12.webp';
 import img3 from '../assets/Images/13.webp';
 import img4 from '../assets/Images/14.webp';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -111,7 +112,6 @@ const Title = styled(motion.h1)`
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
-    left: -50%;
   
   }
 `;
@@ -158,10 +158,19 @@ const Photos = ({ img, name }) => {
 };
 
 const NewArrival = () => {
-  // gsap.registerPlugin(ScrollTrigger);
+   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
 
   const ScrollingRef = useRef(null);
+
+  // const { scroll } = useLocomotiveScroll();
+
+  // useEffect(() => {
+  //   if(scroll){
+  //   console.log(scroll);
+  // scroll.update();
+  //   }
+  // }, [scroll])
 
   useLayoutEffect(() => {
     let element = ref.current;

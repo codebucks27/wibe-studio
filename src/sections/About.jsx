@@ -5,6 +5,8 @@ import img1 from '../assets/Images/1.webp';
 import img2 from '../assets/Images/2.webp';
 import img3 from '../assets/Images/3.webp';
 
+
+
 const Section = styled.section`
   min-height: 100vh;
   width: 80vw;
@@ -40,6 +42,7 @@ const Left = styled.div`
     left: 50%;
     transform: translate(-50%,-50%) !important;
     margin: 0 auto;
+
 
     padding: 2rem;
     font-weight: 600;
@@ -135,13 +138,15 @@ const Title = styled.h1`
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxxxl};
-    left: -50%;
 
     
   }
 `;
 
 const About = () => {
+  
+
+
   return (
     <Section  data-scroll-id="fixed-target" className="about">
       <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">

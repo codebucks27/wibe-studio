@@ -2,7 +2,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+// import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { ThemeProvider } from 'styled-components';
 
 import Loader from './components/Loader';
@@ -16,27 +16,36 @@ import Shop from './sections/Shop';
 import GlobalStyles from './styles/GlobalStyles';
 import { dark } from './styles/Themes';
 
+
+import useLocoScroll from './components/useLocoScroll';
+
+
+
+
 function App() {
   // useLocoScroll();
   const containerRef = useRef(null);
   const [Loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3000);
-  }, []);
+
+  useLocoScroll();
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoaded(true);
+  //   }, 3000);
+  // }, []);
 
   return (
     <>
       <GlobalStyles />
       <ThemeProvider theme={dark}>
-        <LocomotiveScrollProvider
+        {/* <LocomotiveScrollProvider
           options={{
             smooth: true,
             // ... all available Locomotive Scroll instance options
             smartphone: {
-              smooth: true,
+              smooth: false,
             },
             tablet: {
               smooth: true,
@@ -50,20 +59,21 @@ function App() {
             ]
           }
           containerRef={containerRef}
-        >
+        > */}
           <main className="App" data-scroll-container ref={containerRef}>
-            <ScrollTriggerProxy />
+            {/* <ScrollTriggerProxy /> */}
+
             <AnimatePresence>
-              {Loaded ? null : <Loader />}
+              {/* {Loaded ? null : <Loader />} */}
               <Home key="home" />
               <About key="about" />
               <Shop key="Shop" />
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />
-              <Footer key="Footer" />
+              {/* <Footer key="Footer" /> */}
             </AnimatePresence>
           </main>
-        </LocomotiveScrollProvider>
+        {/* </LocomotiveScrollProvider> */}
       </ThemeProvider>
     </>
   );
