@@ -1,14 +1,14 @@
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 import { AnimatePresence } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import {  useRef } from 'react';
 // import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { ThemeProvider } from 'styled-components';
 
-import Loader from './components/Loader';
-import ScrollTriggerProxy from './components/ScrollTriggerProxy';
+// import Loader from './components/Loader';
+// import ScrollTriggerProxy from './components/ScrollTriggerProxy';
 import About from './sections/About';
-import Footer from './sections/Footer';
+// import Footer from './sections/Footer';
 import Home from './sections/Home';
 import Marquee from './sections/Marquee';
 import NewArrival from './sections/NewArrival';
@@ -25,7 +25,7 @@ import useLocoScroll from './components/useLocoScroll';
 function App() {
   // useLocoScroll();
   const containerRef = useRef(null);
-  const [Loaded, setLoaded] = useState(false);
+  // const [Loaded, setLoaded] = useState(false);
 
 
   useLocoScroll();
