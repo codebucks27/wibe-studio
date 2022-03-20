@@ -8,7 +8,6 @@ import img1 from '../assets/Images/11.webp';
 import img2 from '../assets/Images/12.webp';
 import img3 from '../assets/Images/13.webp';
 import img4 from '../assets/Images/14.webp';
-// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -74,8 +73,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0 0 0 9999px ${(props) => props.theme.body}; */
-  /* box-shadow: 0 0 0 9999px ${(props) => props.theme.body}; */
 
   @media (max-width: 64em) {
   width: 30vw;
@@ -163,24 +160,16 @@ const NewArrival = () => {
 
   const ScrollingRef = useRef(null);
 
-  // const { scroll } = useLocomotiveScroll();
-
-  // useEffect(() => {
-  //   if(scroll){
-  //   console.log(scroll);
-  // scroll.update();
-  //   }
-  // }, [scroll])
 
   useLayoutEffect(() => {
     let element = ref.current;
 
     let scrollingElement = ScrollingRef.current;
-
+let t1= gsap.timeline();
     setTimeout(() => {
       let mainHeight = scrollingElement.scrollHeight;
       element.style.height = `calc(${mainHeight / 4}px)`;
-      gsap.to(element, {
+      t1.to(element, {
         scrollTrigger: {
           trigger: element,
           start: 'top top',
@@ -193,7 +182,7 @@ const NewArrival = () => {
         ease: 'none',
       });
 
-      gsap.fromTo(
+      t1.fromTo(
         scrollingElement,
         {
           y: '0',
@@ -216,7 +205,10 @@ const NewArrival = () => {
     }, 1000);
     ScrollTrigger.refresh();
 
-    return () => {};
+    return () => {
+      t1.kill();
+      ScrollTrigger.kill();
+    };
   }, []);
 
   return (

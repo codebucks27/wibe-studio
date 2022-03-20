@@ -1,11 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import img1 from '../assets/Images/1.webp';
-import img2 from '../assets/Images/2.webp';
-import img3 from '../assets/Images/3.webp';
-
-
+import img1 from "../assets/Images/1.webp";
+import img2 from "../assets/Images/2.webp";
+import img3 from "../assets/Images/3.webp";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -18,7 +16,7 @@ const Section = styled.section`
   @media (max-width: 48em) {
     width: 90vw;
   }
-  
+
   @media (max-width: 30em) {
     width: 100vw;
   }
@@ -40,26 +38,23 @@ const Left = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) !important;
+    transform: translate(-50%, -50%) !important;
     margin: 0 auto;
-
 
     padding: 2rem;
     font-weight: 600;
 
     backdrop-filter: blur(2px);
-    background-color: ${props => `rgba(${props.theme.textRgba},0.4)`};
+    background-color: ${(props) => `rgba(${props.theme.textRgba},0.4)`};
     border-radius: 20px;
   }
   @media (max-width: 48em) {
-  font-size: ${(props) => props.theme.fontmd};
-    
+    font-size: ${(props) => props.theme.fontmd};
   }
   @media (max-width: 30em) {
-  font-size: ${(props) => props.theme.fontsm};
-  padding: 2rem;
-  width: 70%;
-    
+    font-size: ${(props) => props.theme.fontsm};
+    padding: 2rem;
+    width: 70%;
   }
 `;
 
@@ -68,7 +63,6 @@ const Right = styled.div`
   position: relative;
   /* min-height: 100vh; */
 
- 
   img {
     width: 100%;
     height: auto;
@@ -92,32 +86,31 @@ const Right = styled.div`
     justify-content: center;
     align-items: center;
     img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
 
-  .small-img-1 {
-    width: 30%;
-    height: auto;
-    left: 5%;
-    bottom: 10%;
-    
-  }
-  .small-img-2 {
-    width: 30%;
-    height: auto;
+    .small-img-1 {
+      width: 30%;
+      height: auto;
+      left: 5%;
+      bottom: 10%;
+    }
+    .small-img-2 {
+      width: 30%;
+      height: auto;
 
-    position: absolute;
-    left: 60%;
-    bottom: 20%;
-  }
+      position: absolute;
+      left: 60%;
+      bottom: 20%;
+    }
   }
 `;
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontBig};
-  font-family: 'Kaushan Script';
+  font-family: "Kaushan Script";
   font-weight: 300;
   /* text-transform: capitalize; */
 
@@ -132,65 +125,63 @@ const Title = styled.h1`
 
   @media (max-width: 64em) {
     font-size: ${(props) => `calc(${props.theme.fontBig} - 5vw)`};
-  top: 0;
-  left: 0%;
-
+    top: 0;
+    left: 0%;
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxxxl};
-
-    
   }
 `;
 
 const About = () => {
-  
-
-
   return (
-    <Section   id="fixed-target" className="about">
-    <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
-      About Us
-    </Title>
-    <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-      We&apos;re fashion studio based in california. We create unique designs that will
-      blow your mind. We also design unique jewellary pieces. Fashion is an ART that can
-      not be grasped by everyone.
-      <br />
-      <br />
-      We are very dedicated to making our products. We offer unique and creative
-      products to a wide range of people. We have a variety of styles, but for most
-      people, all of the options are in the box. We specialize in making things that
-      make you happy.
-      <br />
-      <br />
-      We strive to build on our vision. As a fashion label, we do our best to create
-      amazing experiences for all people. We are always looking to make something that
-      is easy for everyone.
-    </Left>
-
-    <Right>
-      <img width="400" height="600" src={img1} alt="About Us" />
-      <img
-        width="400"
-        height="600"
-        className="small-img-1"
-        src={img2}
-        alt="About Us"
-        data-scroll
-        data-scroll-speed="5"
-      />
-      <img
-        width="400"
-        height="600"
-        className="small-img-2"
-        src={img3}
-        alt="About Us"
+    <Section id="fixed-target" className="about">
+      <Title
         data-scroll
         data-scroll-speed="-2"
-      />
-    </Right>
-  </Section>
+        data-scroll-direction="horizontal"
+      >
+        About Us
+      </Title>
+      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
+        We&apos;re fashion studio based in california. We create unique designs
+        that will blow your mind. We also design unique jewellary pieces.
+        Fashion is an ART that can not be grasped by everyone.
+        <br />
+        <br />
+        We are very dedicated to making our products. We offer unique and
+        creative products to a wide range of people. We have a variety of
+        styles, but for most people, all of the options are in the box. We
+        specialize in making things that make you happy.
+        <br />
+        <br />
+        We strive to build on our vision. As a fashion label, we do our best to
+        create amazing experiences for all people. We are always looking to make
+        something that is easy for everyone.
+      </Left>
+
+      <Right>
+        <img width="400" height="600" src={img1} alt="About Us" />
+        <img
+          width="400"
+          height="600"
+          className="small-img-1"
+          src={img2}
+          alt="About Us"
+          data-scroll
+          data-scroll-speed="5"
+        />
+        <img
+          width="400"
+          height="600"
+          className="small-img-2"
+          src={img3}
+          alt="About Us"
+          data-scroll
+          data-scroll-speed="-2"
+        />
+      </Right>
+    </Section>
   );
 };
 
