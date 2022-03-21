@@ -51,20 +51,20 @@ function App() {
           }
           containerRef={containerRef}
         >
-          {Loaded ? null : <Loader />}
+          <AnimatePresence>
+            {Loaded ? null : <Loader />}
 
-          <main className="App" data-scroll-container ref={containerRef}>
-            <ScrollTriggerProxy />
+            <main className="App" data-scroll-container ref={containerRef}>
+              <ScrollTriggerProxy />
 
-            <AnimatePresence>
               <Home key="home" />
               <About key="about" />
               <Shop key="Shop" />
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />
               <Footer key="Footer" />
-            </AnimatePresence>
-          </main>
+            </main>
+          </AnimatePresence>
         </LocomotiveScrollProvider>
       </ThemeProvider>
     </>
