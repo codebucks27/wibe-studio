@@ -19,7 +19,7 @@ const Section = styled(motion.section)`
   min-height: 100vh;
   height: auto;
   /* width: 80vw; */
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -160,9 +160,9 @@ const Shop = () => {
         scrollTrigger: {
           trigger: element,
           start: "top top",
-          end: pinWrapWidth,
+          end: `${pinWrapWidth} bottom`,
           scroller: ".App", //locomotive-scroll
-          scrub: true,
+          scrub: 1,
           pin: true,
           // markers: true,
           // anticipatePin: 1,
@@ -175,9 +175,9 @@ const Shop = () => {
         scrollTrigger: {
           trigger: scrollingElement,
           start: "top top",
-          end: pinWrapWidth,
+          end: `${pinWrapWidth} bottom`,
           scroller: ".App", //locomotive-scroll
-          scrub: true,
+          scrub: 1,
           // markers: true,
         },
         x: -pinWrapWidth,

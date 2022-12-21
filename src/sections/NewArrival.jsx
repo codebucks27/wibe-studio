@@ -12,7 +12,7 @@ import img4 from '../assets/Images/14.webp';
 const Section = styled.section`
   min-height: 100vh;
   /* height: auto; */
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   /* height: 300vh; */
 
@@ -175,7 +175,7 @@ let t1= gsap.timeline();
           start: 'top top',
           end: 'bottom+=100% top-=100%',
           scroller: '.App', //locomotive-scroll
-          scrub: true,
+          scrub: 1,
           pin: true,
           // markers: true,
         },
@@ -195,7 +195,7 @@ let t1= gsap.timeline();
             start: 'top top',
             end: 'bottom top',
             scroller: '.App',
-            scrub: true,
+            scrub: 1,
             // markers: true,
           },
         },

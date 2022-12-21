@@ -111,7 +111,7 @@ const Navbar = () => {
 
   return (
     <NavContainer
-      click={click}
+      click={+click}
       initial={{ y: `-100%` }}
       animate={{ y: 0 }}
       transition={{ duration: 2, delay: 5 /* 2 */ }}

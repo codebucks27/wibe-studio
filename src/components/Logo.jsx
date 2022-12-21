@@ -10,6 +10,7 @@ const Container = styled.div`
   z-index: 6;
 
   width: 100%;
+  width: fit-content;
 
   a {
     width: 100%;

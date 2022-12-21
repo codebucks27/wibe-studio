@@ -7,13 +7,15 @@ import Logo from "../assets/Svgs/star_white_48dp.svg";
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 100vw;
-  margin: 5rem auto;
+  width: 100%;
+  /* margin: 5rem auto; */
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+
 
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
