@@ -185,9 +185,9 @@ const Footer = () => {
           >
             Made with &hearts; by{" "}
             <a
-              href="http://youtube.com/codebucks"
+              href="http://devdreaming.com"
               target={"_blank"}
-              rel="noreferrer"
+              rel="dofollow noreferrer"
             >
               CodeBucks
             </a>
