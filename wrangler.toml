@@ -1,0 +1,12 @@
+name = "huhu-s-gallery"
+type = "javascript"
+account_id = "bb8d1ead8c2356ca6d2f2abbe17066f0"
+workers_dev = true
+compatibility_date = "2023-10-25"
+
+main = "./worker.js"  # 指定生成的 JS 文件
+
+# wrangler.toml (wrangler v3.79.0^)
+[observability]
+enabled = true
+head_sampling_rate = 1
