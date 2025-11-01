@@ -1,10 +1,12 @@
 export const light = {
-  body: '#fff',
-  text: '#202020', // black shade
-  bodyRgba: '255, 255, 255',
-  textRgba: '32,32,32',
+  body: '#FDFDFE',
+  text: '#030C30', // Near Black 2
+  bodyRgba: '253, 253, 254',
+  textRgba: '3, 12, 48',
 
-  grey: '#bebebe',
+  grey: '#eef2f9', // A very light blue/grey for backgrounds
+  accent: '#3B5689', // Medium Blue
+  accentRgba: '59, 86, 137',
 
   fontxs: '0.75em',
   fontsm: '0.875em',
@@ -19,12 +21,14 @@ export const light = {
 };
 
 export const dark = {
-  body: '#202020',
-  text: '#fff', // black shade
-  bodyRgba: '32,32,32',
-  textRgba: '255, 255, 255',
+  body: '#030828', // Near Black 1
+  text: '#FDFDFE', // White
+  bodyRgba: '3, 8, 40',
+  textRgba: '253, 253, 254',
 
-  grey: '#bebebe',
+  grey: '#1B2A51', // Dark Blue (e.g., for Shop background)
+  accent: '#3B5689', // Medium Blue
+  accentRgba: '59, 86, 137',
 
   fontxs: '0.75em',
   fontsm: '0.875em',
@@ -37,3 +41,5 @@ export const dark = {
 
   navHeight: '5rem',
 };
+
+export const themes = { light, dark };
