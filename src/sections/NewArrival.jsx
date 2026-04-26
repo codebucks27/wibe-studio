@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, {  useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 
@@ -207,7 +207,7 @@ let t1= gsap.timeline();
 
     return () => {
       t1.kill();
-      ScrollTrigger.kill();
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
 

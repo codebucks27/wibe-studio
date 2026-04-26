@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const NavContainer = styled(motion.div)`
   position: absolute;
   /* left: 50%; */
-  top: ${(props) => (props.click ? '0' : `-${props.theme.navHeight}`)};
+  top: ${(props) => (props.$click ? '0' : `-${props.theme.navHeight}`)};
   transition: all 0.3s ease;
   /* transform: translateX(-50%); */
   z-index: 6;
@@ -17,9 +17,9 @@ const NavContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
 
-  
+
   @media (max-width: 40em) {
-    top: ${(props) => (props.click ? '0' : `calc(-50vh - 4rem)`)};
+    top: ${(props) => (props.$click ? '0' : `calc(-50vh - 4rem)`)};
 
   }
 `;
@@ -111,7 +111,7 @@ const Navbar = () => {
 
   return (
     <NavContainer
-      click={+click}
+      $click={click}
       initial={{ y: `-100%` }}
       animate={{ y: 0 }}
       transition={{ duration: 2, delay: 5 /* 2 */ }}

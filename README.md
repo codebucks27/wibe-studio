@@ -14,6 +14,31 @@ checkout following **Tutorial** to learn👇: <br />
 
 [![YouTube Video Views](https://img.shields.io/youtube/views/Ra1Fsa9YJCk?style=social)](https://youtu.be/Ra1Fsa9YJCk)<br />
 
+## 🚀 2026 Refresh — What Changed
+
+The original tutorial code (Create React App + React 17) has been modernized:
+
+- **Build tool:** Migrated from `create-react-app` (`react-scripts`) to **Vite** for instant startup and fast HMR.
+- **Package manager:** Switched to **bun**.
+- **React:** `17.x` → `19.x` (uses the new `createRoot` API).
+- **Routing:** `react-router-dom` `6.x` → `7.x`.
+- **Animation:** `framer-motion` `6.x` → `12.x` (replaced removed `yoyo` with `repeat`/`repeatType`).
+- **Styling:** `styled-components` `5.x` → `6.x` (custom DOM props converted to transient `$` props).
+- **Fonts:** `@fontsource/*` `4.x` → `5.x`.
+- Removed CRA-only files (`reportWebVitals`, `setupTests`, `manifest.json`, default logos, test boilerplate).
+
+> Looking for the original tutorial code? Check out the pre-update commit: [`f256a87`](https://github.com/codebucks27/wibe-studio/commit/f256a8761be47c632f1f77ed4add04c10e91f0e6).
+
+### Run Locally
+
+```bash
+bun install
+bun run dev      # start dev server at http://localhost:3000
+bun run build    # production build to ./build
+bun run preview  # preview the production build
+```
+
+
 
 ### Images of The Fashion Studio Website:
 ![HOME](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-Home-Desktop.png)
@@ -90,6 +115,4 @@ https://www.pexels.com/@godisable-jacob-226636<br />
 -- bill cunningham
 
 "One is never over-dressed or under-dressed with a Little Black Dress." —Karl Lagerfeld<br />
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
