@@ -1,16 +1,16 @@
 # 🔥Build a Stunning Fashion Studio Website with React JS [ Locomotive Scroll + GSAP + Framer Motion ]
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/wibe-studio-starter-files?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/wibe-studio-starter-files?style=social&logo=KashFlow&&label=Forks)&nbsp;&nbsp;
+![GitHub stars](https://img.shields.io/github/stars/codebucks27/wibe-studio?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
+![GitHub forks](https://img.shields.io/github/forks/codebucks27/wibe-studio?style=social&logo=KashFlow&&label=Forks)&nbsp;&nbsp;
 ![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
 
-This repository contains final code for Fashion Studio Website in ReactJS. <br />
+This repository contains the finished Fashion Studio website from the tutorial, with the 2026 tooling refresh described below. The final code and starter files are available in public repositories for free.
 
-View Demo👇: <br />
-https://wibe-studio.netlify.app/ <br />
-
-checkout following **Tutorial** to learn👇: <br />
-<a href="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap" target="_blank">🔥Build a Stunning Fashion Studio Website with React JS</a> ![YouTube Video Views](https://img.shields.io/youtube/views/Ra1Fsa9YJCk?style=social) </br >
+- [Final code (this repository)](https://github.com/codebucks27/wibe-studio)
+- [Starter files for following the original tutorial](https://github.com/codebucks27/wibe-studio-starter-files)
+- [Watch the YouTube tutorial](https://youtu.be/Ra1Fsa9YJCk)
+- [Tutorial article and code links](https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap#code-links)
+- [Live demo](https://wibe-studio.netlify.app/)
 
 [![YouTube Video Views](https://img.shields.io/youtube/views/Ra1Fsa9YJCk?style=social)](https://youtu.be/Ra1Fsa9YJCk)<br />
 
@@ -31,13 +31,25 @@ The original tutorial code (Create React App + React 17) has been modernized:
 
 ### Run Locally
 
+Install Node.js 22.12+ and Bun 1.2.0 (the version recorded in `packageManager`). No API keys or environment variables are required.
+
 ```bash
-bun install
+git clone https://github.com/codebucks27/wibe-studio.git
+cd wibe-studio
+bun install --frozen-lockfile
 bun run dev      # start dev server at http://localhost:3000
-bun run build    # production build to ./build
-bun run preview  # preview the production build
 ```
 
+Keep `bun.lock` when installing so the checked-in dependency versions are used.
+
+### Build and Preview
+
+```bash
+bun run build    # production build to ./build
+bun run preview  # preview the production build at http://localhost:4173
+```
+
+Run the build before previewing it. For static hosting, use `bun run build` as the build command and `build` as the publish directory. Serve the contents of that directory at the site root. The app runs entirely in the browser.
 
 
 ### Images of The Fashion Studio Website:
@@ -46,6 +58,10 @@ bun run preview  # preview the production build
 ![HOME](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-Home-Moblie.png)
 ![ABOUT](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-About-Mobile.png)
 
+
+### Code and Media Licensing
+
+A code license has not yet been specified in this repository. Free public access does not itself grant permission to reuse or redistribute the code. Photos and video have separate terms; the creator credits below are not per-asset license records. Check the original asset pages and their terms before reusing the media.
 
 ### Resources Used in This Project
 
